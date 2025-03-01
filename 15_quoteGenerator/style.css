@@ -1,0 +1,47 @@
+body{
+
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(135deg,rgb(233, 180, 83),rgb(191, 138, 68));
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    background-color: rgb(212, 191, 233);
+    padding: 10px 20px;
+    width: 250px;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+#quote{
+    font-size: 20px;
+    font-style: italic;
+}
+
+#quote::before,#quote::after{
+  content: ' " ';
+}
+
+#author{
+    font-size: 40px;
+    color: rgb(231, 89, 89);
+}
+
+#author::before{
+    content: ' - ';
+}
+
+#btnGenerate{
+    background-color: navajowhite;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnGenerate:hover{
+    transform: scale(90%);
+}

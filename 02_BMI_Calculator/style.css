@@ -1,0 +1,8 @@
+.container{
+    width: 40%;
+    background-color: brown;
+    padding: 10px ;
+    border: 10px solid burlywood;
+    border-radius: 20px;
+    margin: auto;
+}

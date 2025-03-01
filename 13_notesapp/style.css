@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg,rgb(221, 214, 205),rgb(107, 73, 11));
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    width: 250px;
+    background-color: rgb(228, 228, 109);
+    margin: 20px auto;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+}
+
+#btncreate{
+    border: none;
+    outline: none;
+    background-color: rgb(208, 149, 106);
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#btncreate:hover{
+    transform: scale(90%);
+}
+
+.content{
+    position: relative;
+}
+
+
+.inputBox{
+    border: none;
+    outline: none;
+    width: 90%;
+    height: 100px;
+    background: rgb(227, 230, 233);
+    padding: 10px;
+}
+
+.btnRemove{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    background: rgb(214, 205, 79);
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.btnRemove:hover{
+    transform: scale(90%);
+}

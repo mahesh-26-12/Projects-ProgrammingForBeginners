@@ -1,0 +1,28 @@
+
+
+h2{
+    text-align: center;
+}
+.container{
+
+    width: 150px;
+    background-color: seagreen;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    border: 10px solid chocolate;
+    border-radius: 10px;
+}
+
+textarea{
+    width: 130px;
+}
+
+.buttons > input {
+    width: 30px;
+    height: 30px;
+    margin: 5px 0px;
+    text-align: center;
+}

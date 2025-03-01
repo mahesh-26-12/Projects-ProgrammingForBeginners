@@ -1,0 +1,15 @@
+.container{
+
+    width: 40%;
+    background-color: saddlebrown;
+    padding: 20px;
+    border: 10px solid salmon;
+    border-radius:  10px;
+    text-align: center;
+    margin: auto;
+}
+
+
+#userImage{
+    border-radius: 50%;
+}

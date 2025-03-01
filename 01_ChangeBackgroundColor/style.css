@@ -1,0 +1,31 @@
+.container{
+    width: 50%;
+    background-color: cadetblue;
+    padding: 20px;
+    border: 2px solid beige;
+    text-align: center;
+    margin: auto;
+}
+
+#changebgcolor,#changebgcolor1,#changebgcolor2{
+    background-color: bisque;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 4px 5px;
+}
+
+#changebgcolor:hover{
+    transform: scale(0.9);
+    
+}
+
+#changebgcolor1:hover{
+    transform: scale(0.9);
+    
+}
+
+#changebgcolor2:hover{
+    transform: scale(0.9);
+    
+}
