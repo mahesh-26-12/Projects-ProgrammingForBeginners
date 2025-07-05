@@ -1,0 +1,202 @@
+body {
+  background-color: #9FF3FF;
+  cursor: default;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Black overlay that comes from bottom */
+body::before {
+  content: '';
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: -1;
+  animation: blackSlideUp 1.5s ease-out 1s forwards;
+}
+
+@keyframes blackSlideUp {
+  to { 
+    top: 0; 
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.nav-logo {
+  height: 40px;
+  margin-right: 150px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: slideDownNavbar 1s ease 2.8s forwards;
+}
+
+@keyframes slideDownNavbar {
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.nav-links li a {
+  color: #aefbff;
+  text-decoration: none;
+  font-size: 19.244px;
+  font-family: 'Untitled Sans', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 3px 0;
+}
+
+.nav-links li a:hover {
+  color: #9FF3FF;
+}
+
+/* Rectangle Wrapper Styling */
+.rectangle-wrapper {
+  position: relative;
+  width: 300px;
+  height: 80px;
+  margin: 20px auto;
+}
+
+.rectangle-wrapper svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #9FF3FF;
+  fill: none;
+  stroke-width: 2;
+  opacity: 0;
+  animation: svgAppear 0.5s ease 4s forwards, drawRectangle 2s ease 4.5s forwards;
+}
+
+.rectangle-wrapper svg path {
+  stroke-dasharray: 628; /* Perimeter of rectangle (2 * (231 + 73)) */
+  stroke-dashoffset: 628;
+}
+
+@keyframes svgAppear {
+  to { 
+    opacity: 1; 
+  }
+}
+
+@keyframes drawRectangle {
+  to { 
+    stroke-dashoffset: 0; 
+  }
+}
+
+.rectangle-wrapper .center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #9FF3FF;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Untitled Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  animation: textFadeIn 0.8s ease 6.5s forwards;
+}
+
+@keyframes textFadeIn {
+  to { 
+    opacity: 1; 
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.hero .split-text {
+  font-size: 124.546px;
+  font-family: 'Editorial New', serif;
+  color: #9FF3FF;
+  line-height: 1.1;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideUpText 1.2s ease 7s forwards;
+}
+
+.hero .split-text:nth-of-type(2) {
+  animation-delay: 7.3s;
+}
+
+.hero .split-text1 {
+  font-size: 18.4434px;
+  font-family: 'Untitled Sans', sans-serif;
+  color: #9FF3FF;
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUpText 1s ease 7.6s forwards;
+}
+
+@keyframes slideUpText {
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Optional: Add a subtle glow effect to elements */
+.nav-links li a,
+.rectangle-wrapper .center-text,
+.hero .split-text,
+.hero .split-text1 {
+  text-shadow: 0 0 10px rgba(159, 243, 255, 0.3);
+}
+
+.rectangle-wrapper svg {
+  filter: drop-shadow(0 0 5px rgba(159, 243, 255, 0.5));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero .split-text {
+    font-size: 80px;
+  }
+  
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .nav-logo {
+    margin-right: 50px;
+  }
+  
+  .rectangle-wrapper {
+    width: 250px;
+    height: 60px;
+  }
+}
