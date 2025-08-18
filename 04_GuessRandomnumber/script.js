@@ -1,7 +1,7 @@
 //Generate random number between 1 to 100
 function getRandomNumber(){
-    let random = Math.ceil(Math.random()  * 100)
-    return random
+     return  Math.ceil(Math.random()  * 100)
+   
 }
 
 let userinput = document.querySelector('#userinput')
@@ -16,6 +16,14 @@ let attempts = 0; // Initialize the attempts counter
 
 function submitButtonClick(){
    let userGuess = parseInt(userinput.value) 
+
+   //Validate input
+   if(isNaN(userGuess) || userGuess < 1 || userGuess >100){
+        result.innerHTML = "Please enter a valid number between 1 and 100"
+        userinput.value = ""
+        userinput.focus();
+        return; // Exit the function if input is invalid
+   }
    attempts++; // Increment the counter for each guess
    noofattempts.innerHTML = `Number attempts made : ${attempts}`
 
@@ -27,15 +35,18 @@ function submitButtonClick(){
       }
       else if(userGuess > randomNumber){
         result.innerHTML = "Your guess is too high"
-           userinput.value = ""
+          
       }
-    else if(userGuess === randomNumber)
-        result.innerHTML = "Your guess is Correct"
-  
+    else {
+      result.innerHTML = "Your guess is Correct"  
+      submitbtn.disabled = true; // Disable the button after correct guess
+      userinput.disabled = true; // Disable the input field after correct guess
+    }
+   userinput.value = "";
+   userinput.focus(); // Set focus back to the input field
 
 //    }
 }
 
-submitbtn.addEventListener('click',function(){
-    submitButtonClick()
-})
+submitbtn.addEventListener('click',submitButtonClick)
+    
