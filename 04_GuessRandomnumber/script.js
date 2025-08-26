@@ -25,7 +25,7 @@ function submitButtonClick(){
         return; // Exit the function if input is invalid
    }
    attempts++; // Increment the counter for each guess
-   noofattempts.innerHTML = `Number attempts made : ${attempts}`
+   noofattempts.innerHTML = `Number of attempts made : ${attempts}`
 
 //    while(userGuess !== randomNumber){
       if(userGuess < randomNumber){
