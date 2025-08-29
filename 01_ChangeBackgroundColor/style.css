@@ -1,31 +1,51 @@
+body{
+    transition: background-color 0.5s ease-in-out;
+    font-family: Arial,sans-serif;
+}
 .container{
     width: 50%;
     background-color: cadetblue;
     padding: 20px;
     border: 2px solid beige;
     text-align: center;
-    margin: auto;
+    margin:40px  auto;
+    border-radius: 10px;
 }
 
-#changebgcolor,#changebgcolor1,#changebgcolor2{
+#changebgcolor,#changebgcolor1,#changebgcolor2,#resetbgcolor{
     background-color: bisque;
     color: black;
     border-radius: 10px;
-    padding: 5px;
+    padding:10px 15px;
     margin: 4px 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease,background-color 0.3s ease;
 }
 
 #changebgcolor:hover{
-    transform: scale(0.9);
-    
+     transform: scale(1.05);
+    background-color: lightyellow;
 }
 
 #changebgcolor1:hover{
-    transform: scale(0.9);
+     transform: scale(1.05);
+    background-color: lightyellow;
     
 }
 
 #changebgcolor2:hover{
-    transform: scale(0.9);
-    
+     transform: scale(1.05);
+    background-color: lightyellow;
+}
+
+#colorCode {
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
 }

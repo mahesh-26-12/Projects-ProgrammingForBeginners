@@ -2,7 +2,8 @@ let btn =document.querySelector('#changebgcolor')
 let body =document.querySelector('body')
 let btn1 = document.querySelector('#changebgcolor1')
 let btn2 = document.querySelector('#changebgcolor2')
-
+let resetBtn = document.querySelector('#resetbgcolor')
+let colorCode = document.querySelector('#colorcode')
 
 function getRandomColor(){
     let str = '0123456789abcdef'
@@ -15,17 +16,36 @@ function getRandomColor(){
     return color
 }
 
+
+function changeColor(color){
+    body.style.backgroundColor = color
+    colorCode.textContent = color
+}
+
+
 btn.addEventListener('click',function(){
-//change bg color    
-body.style.backgroundColor = getRandomColor()
+let randomColor = getRandomColor()   
+changeColor(randomColor)
 })
 
 btn1.addEventListener('click',function(){
-    //change bg color    
-    body.style.backgroundColor = "blue"
+    changeColor('blue')
     })
 
 btn2.addEventListener('click',function(){
-        //change bg color    
-        body.style.backgroundColor = "blueviolet"
+       changeColor('blueviolet')
         })
+
+    //Reset to default
+    resetBtn.addEventListener('click',function(){
+        body.style.backgroundColor = "";
+        colorCode.textContent = "Default"
+    })
+
+    //copy color to clipboard when clicked 
+    colorCode.addEventListener('click',function(){
+        if(colorCode.textContent !== "Default"){
+            navigator.clipboard.writeText(colorCode.textContent)
+            alert(`Color ${colorCode.textContent} copied to clipboard!`)
+        }
+    })
