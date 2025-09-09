@@ -22,8 +22,7 @@ function addTask(){
 
 function handleListClick(event){
     if(event.target.tagName === 'LI'){
-        let upadtedTask = prompt('Enter upadted Task')
-      event.target.innerHTML =`${upadtedTask} <button>Remove</button>`    
+       event.target.classList.toggle('completed');
     }
     else if(event.target.tagName === 'BUTTON'){
         console.log(event.target);
